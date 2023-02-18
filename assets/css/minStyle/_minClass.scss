@@ -1,0 +1,48 @@
+.overlay {
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.26);
+  position: fixed;
+  z-index: 99;
+  display: none;
+}
+
+.section-padding {
+  padding: 40px 0;
+}
+.section-margin {
+  margin: 40px 0;
+}
+
+.container-width {
+  max-width: 660px;
+  @include dir(rtl) {
+    margin-right: auto;
+  }
+  @include dir(ltr) {
+    margin-left: auto;
+  }
+  @media (max-width: 992px) {
+    & {
+      max-width: 100%;
+    }
+  }
+}
+
+.over-flow-hidden {
+  overflow-y: hidden;
+}
+
+.section-pattern {
+  position: relative;
+  z-index: 1;
+  &::after {
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.1;
+    background-image: url("../img/aboutPattern.png");
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+}

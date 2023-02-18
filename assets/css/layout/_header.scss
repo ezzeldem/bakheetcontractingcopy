@@ -1,0 +1,305 @@
+.nav-section {
+  z-index: 5;
+  padding: 30px 0;
+  @extend%trans2;
+  background-color: transparent;
+  z-index: 999999;
+  position: relative;
+  .nav-box {
+    z-index: 99999999;
+    & > ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      & > li {
+        @include dir(ltr) {
+          margin-right: 30px;
+        }
+        @include dir(rtl) {
+          margin-left: 30px;
+        }
+        &:last-of-type {
+          margin: 0 !important;
+        }
+        & > a {
+          text-transform: uppercase;
+          padding: 8px 0;
+          font-weight: 600;
+          font-size: 16px;
+          position: relative;
+          color: $color-black;
+          z-index: 999;
+          border-bottom: 1px solid transparent;
+          border-top: 1px solid transparent;
+          &:hover {
+            color: $color-primary-dark;
+            border-bottom-color: $color-primary-dark;
+          }
+          &.active {
+            border-bottom-color: $color-primary-dark;
+            border-top-color: $color-primary-dark;
+          }
+        }
+        .child-box {
+          position: absolute;
+          background-color: #e3e5ea;
+          left: 0;
+          right: 0;
+          top: 120px;
+          padding: 24px 0;
+          box-shadow: 0px 0px 20px 0px rgba($color-primary-light, 0.1);
+          display: none;
+          .title {
+            font-size: 30px;
+            font-weight: 600;
+            color: $color-primary-dark;
+            padding: 0 0 14px;
+          }
+          .prag {
+            margin-bottom: 14px;
+            width: 90%;
+            line-height: 1.45;
+            font-size: 18px;
+            font-weight: 400;
+            color: $color-black;
+          }
+          .nav-link-list {
+            font-size: 18px;
+            font-weight: 400;
+            color: $color-primary;
+          }
+          .child-nav-list {
+            li {
+              a {
+                display: block;
+                padding: 12px 0;
+                font-size: 18px;
+                font-weight: 700;
+                color: $color-gray;
+                border-top: 1px solid $color-white;
+                border-bottom: 1px solid $color-white;
+                &:hover {
+                  color: $color-primary-dark;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .icon-box-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .icon-box {
+      align-items: center;
+      text-align: end;
+      display: flex;
+      cursor: pointer;
+      @include dir(ltr) {
+        border-left: 1px solid $color-gray;
+        i {
+          padding: {
+            right: 10px;
+          }
+        }
+      }
+      @include dir(rtl) {
+        border-right: 1px solid $color-gray;
+        i {
+          padding: {
+            left: 10px;
+          }
+        }
+      }
+      padding: 0 14px;
+      &:first-of-type {
+        border: 0 !important;
+      }
+      &,
+      a {
+        font-size: 15px;
+        font-weight: 500;
+        color: $color-gray;
+      }
+      &.menu-icon {
+        display: none;
+      }
+    }
+  }
+  .search-box {
+    position: absolute;
+    background-color: #e3e5ea;
+    left: 0;
+    right: 0;
+    top: 150px;
+    padding: 24px 0;
+    box-shadow: 0px 0px 20px 0px rgba($color-primary-light, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: none;
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      input {
+        margin: 0 24px;
+        width: 400px;
+        max-width: 100%;
+        padding: 12px;
+        &:focus {
+          outline: transparent;
+          box-shadow: unset;
+        }
+      }
+      button {
+        font-size: 18px;
+        border: 0;
+        padding: 12px 18px;
+        color: rgba($color-white, 1);
+        background-color: rgba($color-primary-dark, 1);
+        @include dir(rtl) {
+          i {
+            padding: {
+              left: 10px;
+            }
+          }
+        }
+        @include dir(ltr) {
+          i {
+            padding: {
+              right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .mobile-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-section {
+    .nav-box {
+      & > ul {
+        & > li {
+          @include dir(rtl) {
+            margin-left: 12px;
+          }
+          @include dir(ltr) {
+            margin-right: 12px;
+          }
+          & > a {
+            font-size: 11px;
+          }
+          .child-box {
+            .child-nav-list {
+              li {
+                a {
+                  font-size: 15px;
+                  padding: 10px 0;
+                }
+              }
+            }
+            .prag {
+              width: 100%;
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+    .search-box {
+      form {
+        input {
+          width: 300px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 772px) {
+  .nav-section {
+    .search-box {
+      form {
+        input {
+          width: 200px;
+          max-width: 200px;
+        }
+        button {
+          font-size: 12px;
+          padding: 16px 18px;
+        }
+      }
+    }
+    .mobile-menu {
+      position: fixed;
+      background-color: #e3e5ea;
+      left: 0;
+      right: 0;
+      top: 150px;
+      height: 100%;
+      padding: 60px;
+      & > ul {
+        overflow-y: auto;
+        & > li {
+          padding: 0 0 20px;
+          margin: 0 0 20px;
+          border-bottom: 2px solid #fff;
+          & > a {
+            font-size: 20px;
+            font-weight: 600;
+            color: rgba($color-gray, 1);
+            transition: 0.2s all ease-in-out;
+            &:hover {
+              color: rgba($color-primary, 1);
+            }
+          }
+          ul {
+            padding: 0 16px;
+            li {
+              margin-top: 12px;
+
+              a {
+                font-size: 16px;
+                font-weight: 600;
+                color: rgba($color-gray, 1);
+                transition: 0.2s all ease-in-out;
+                &:hover {
+                  color: rgba($color-primary, 1);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .nav-box {
+      display: none;
+    }
+    .icon-box-container {
+      .icon-box {
+        &,
+        a {
+          font-size: 12px;
+          font-weight: 500;
+        }
+        &.menu-icon {
+          display: block;
+          .open {
+            display: block;
+          }
+          .close {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.socile-list-box {
+  .socile-list {
+    display: flex;
+    align-items: center;
+    li {
+      @include dir(ltr) {
+        padding-right: 12px;
+      }
+      @include dir(rtl) {
+        padding-left: 12px;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        font-size: 24px;
+        color: $color-white;
+        background-color: $color-primary;
+        @extend%trans2;
+        &:hover {
+          color: rgba($color-primary, 1);
+          background-color: $color-white;
+        }
+      }
+    }
+  }
+}

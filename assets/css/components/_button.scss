@@ -1,0 +1,54 @@
+.link-box {
+  &.full-box {
+    a,
+    button {
+      background-color: $color-primary;
+      color: $color-white;
+      &:hover {
+        background-color: $color-primary-dark;
+        border-color: $color-primary-dark;
+      }
+    }
+  }
+  &.transparent-box {
+    a,
+    button {
+      background-color: transparent;
+      color: $color-white;
+      border: 0;
+      padding: 0;
+      &:hover {
+        background-color: transparent;
+        box-shadow: unset;
+        color: rgba($color-primary-light, 1);
+      }
+    }
+  }
+  a,
+  button {
+    display: block;
+    width: fit-content;
+    font-size: 17px;
+    font-weight: 500;
+    color: $color-primary;
+    padding: 12px 30px;
+    border: solid 1px $color-primary;
+    position: relative;
+    background-color: transparent;
+    @extend%trans2;
+    z-index: 1;
+    i {
+      @include dir(ltr) {
+        padding-right: 12px;
+      }
+      @include dir(rtl) {
+        padding-left: 12px;
+      }
+    }
+    &:hover {
+      background-color: $color-primary;
+      color: $color-white;
+      box-shadow: inset 0 0 18px rgba($color-black, 0.2);
+    }
+  }
+}

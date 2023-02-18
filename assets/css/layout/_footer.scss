@@ -1,0 +1,19 @@
+.copyRight-footer {
+  text-align: center;
+  background-color: rgba($color-primary, 1);
+
+  padding: 20px 0;
+
+  .copyRight-footer-h {
+    color: rgba($color-white, 1);
+    font-size: 14px;
+    font-weight: 600;
+    a {
+      color: rgba($color-white, 1);
+      @extend%trans4;
+      &:hover {
+        color: rgba($color-primary-dark, 1);
+      }
+    }
+  }
+}

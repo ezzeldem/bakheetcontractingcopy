@@ -1,0 +1,43 @@
+.small-box {
+  padding: 0 24px 24px;
+  .title {
+    font-size: 34px;
+    color: $color-secondary-dark;
+    padding: 0 0 12px;
+    font-weight: 700;
+  }
+  .sub-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: $color-gray-dark;
+  }
+}
+
+.vision-img-box {
+  position: relative;
+  height: 600px;
+  .back-img {
+    height: 600px;
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    object-fit: cover;
+    transform: translateY(-50%);
+    @include dir(rtl) {
+      left: 0;
+    }
+    @include dir(ltr) {
+      right: 0;
+    }
+  }
+  .front-img {
+    position: absolute;
+    object-fit: cover;
+    top: 50%;
+    height: 329px;
+    width: 80%;
+    left: 100px;
+    filter: drop-shadow(0px 0px 4px rgba($color-black, 0.5));
+    transform: translateY(-50%);
+  }
+}

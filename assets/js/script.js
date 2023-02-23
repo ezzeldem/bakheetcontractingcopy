@@ -15,7 +15,9 @@ $(document).ready(function () {
     $(".child-box").hide();
   });
   $(" .nav-section .nav-box > ul > li").click(function (e) {
-    e.preventDefault();
+    if ($(this).children(".child-box").hasClass(".child-box")) {
+      e.preventDefault();
+    }
     e.stopPropagation();
     $(this).children("a").addClass("active");
     $(this).children(".child-box").show();
@@ -45,3 +47,14 @@ $(document).ready(function () {
   );
   AOS.init();
 });
+
+window.addEventListener(
+  "scroll",
+  () => {
+    document.body.style.setProperty(
+      "--scroll",
+      window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+    );
+  },
+  false
+);

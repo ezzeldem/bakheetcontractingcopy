@@ -1,4 +1,16 @@
 .link-box {
+  &.width-box {
+    a,
+    button {
+      padding: 12px 80px;
+    }
+  }
+  &.center-box {
+    a,
+    button {
+      margin: 0 auto;
+    }
+  }
   &.full-box {
     a,
     button {

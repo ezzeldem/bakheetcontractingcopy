@@ -3,3 +3,10 @@
     @content;
   }
 }
+@mixin animation-scroll($name) {
+  animation: #{$name} 1s ease-in-out infinite;
+  animation-delay: calc(var(--scroll) * -1s);
+  animation-play-state: paused;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}

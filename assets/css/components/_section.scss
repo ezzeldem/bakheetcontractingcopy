@@ -1,0 +1,23 @@
+.mission-section {
+  @extend.section-pattern;
+  .margin-aside {
+    @include dir(ltr) {
+      margin-left: -160px;
+    }
+    @include dir(rtl) {
+      margin-right: -160px;
+    }
+  }
+  .mission-img-box {
+    img {
+      height: 500px;
+      object-fit: cover;
+    }
+  }
+  .section-title-box {
+    filter: drop-shadow(0px 0px 8px rgba($color-black, 0.1));
+    padding: 30px;
+    backdrop-filter: blur(6px);
+    background-color: rgba($color-white, 0.95);
+  }
+}

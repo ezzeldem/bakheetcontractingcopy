@@ -46,6 +46,14 @@ $(document).ready(function () {
     }
   );
   AOS.init();
+  $(".js-tilt").tilt({
+    glare: true,
+    maxGlare: 0.2,
+    speed: 700,
+    easing: "ease-in-out",
+    scale: 0.95,
+    transition: true,
+  });
 });
 
 window.addEventListener(

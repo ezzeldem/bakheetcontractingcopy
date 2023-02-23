@@ -58,9 +58,18 @@ $(document).ready(function () {
     },
   });
 
-  new Swiper("#team-slider", {
-    slidesPerView: 4,
-    spaceBetween: 30,
-    freeMode: true,
+  new Swiper(".mySwiper", {
+    slidesPerView: 2,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      772: {
+        slidesPerView: 5,
+        spaceBetween: 10,
+      },
+    },
   });
 });

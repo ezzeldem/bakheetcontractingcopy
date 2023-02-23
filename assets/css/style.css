@@ -1241,49 +1241,70 @@ html[dir=rtl] .mission-section .margin-aside {
   background-color: rgba(255, 255, 255, 0.95);
 }
 
-.team-section .team-slider .team-box:hover .img-box:after {
-  opacity: 1;
-}
-.team-section .team-slider .team-box:hover .img-box img {
-  transform: scale(1.2);
-}
-.team-section .team-slider .team-box .img-box {
+.objectives-section .objectives-list-box .objectives-list li {
   position: relative;
-  z-index: 1;
-  overflow: hidden;
-}
-.team-section .team-slider .team-box .img-box:after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  transition: 1s all ease-in-out;
-  opacity: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.team-section .team-slider .team-box .img-box img {
-  transition: 1s all ease-in-out;
-  width: 100%;
-  height: 400px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.team-section .team-slider .team-box .name {
-  padding: 12px;
-  font-size: 24px;
-  font-weight: 800;
+  font-size: 16px;
+  font-weight: 600;
   color: #4b4b4b;
+  margin: 12px 0;
+  padding: 0 30px;
 }
-.team-section .team-slider .team-box .job {
-  padding: 0 12px;
-  font-size: 14px;
-  font-weight: 800;
+.objectives-section .objectives-list-box .objectives-list li:after {
+  position: absolute;
   color: #969696;
+  content: "\f111";
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 5px;
+  top: 50%;
+  transform: translateY(-50%) rotate(30deg);
+}
+html[dir=rtl] .objectives-section .objectives-list-box .objectives-list li:after {
+  right: 0;
+}
+html[dir=ltr] .objectives-section .objectives-list-box .objectives-list li:after {
+  left: 0;
+}
+.objectives-section .objectives-img {
+  position: relative;
+}
+.objectives-section .objectives-img:after {
+  inset: 16px;
+  position: absolute;
+  border: 10px solid white;
+  content: "";
+}
+
+.partners-slider-box .partners-slider-item {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.partners-slider-box .partners-slider-item img {
+  height: 60px;
+  margin: 0 0 12px;
+}
+.partners-slider-box .partners-slider-item .partners-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: #4b4b4b;
 }
 
 @keyframes bannerScale {
   to {
-    opacity: 0.2;
-    transform: scale(0);
+    opacity: 0;
+    transform: scale(-1) translateY(-300px);
   }
 }
 .copyRight-footer .copyRight-footer-h a, .our-project-section .projects-swiper-button-box .projects-swiper-button {

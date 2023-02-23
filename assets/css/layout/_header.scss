@@ -13,10 +13,10 @@
       justify-content: space-between;
       & > li {
         @include dir(ltr) {
-          margin-right: 30px;
+          margin-right: 20px;
         }
         @include dir(rtl) {
-          margin-left: 30px;
+          margin-left: 20px;
         }
         &:last-of-type {
           margin: 0 !important;
@@ -25,7 +25,7 @@
           text-transform: uppercase;
           padding: 8px 0;
           font-weight: 600;
-          font-size: 16px;
+          font-size: 14px;
           position: relative;
           color: $color-black;
           z-index: 999;
@@ -249,11 +249,11 @@
       & > ul {
         overflow-y: auto;
         & > li {
-          padding: 0 0 20px;
-          margin: 0 0 20px;
+          padding: 0 0 16px;
+          margin: 0 0 16px;
           border-bottom: 2px solid #fff;
           & > a {
-            font-size: 20px;
+            font-size: 15px;
             font-weight: 600;
             color: rgba($color-gray, 1);
             transition: 0.2s all ease-in-out;

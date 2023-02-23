@@ -101,10 +101,10 @@ html[dir=ltr] body {
   justify-content: space-between;
 }
 html[dir=ltr] .nav-section .nav-box > ul > li {
-  margin-right: 30px;
+  margin-right: 20px;
 }
 html[dir=rtl] .nav-section .nav-box > ul > li {
-  margin-left: 30px;
+  margin-left: 20px;
 }
 .nav-section .nav-box > ul > li:last-of-type {
   margin: 0 !important;
@@ -113,7 +113,7 @@ html[dir=rtl] .nav-section .nav-box > ul > li {
   text-transform: uppercase;
   padding: 8px 0;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   position: relative;
   color: #000;
   z-index: 999;
@@ -295,12 +295,12 @@ html[dir=ltr] .nav-section .search-box form button i {
     overflow-y: auto;
   }
   .nav-section .mobile-menu > ul > li {
-    padding: 0 0 20px;
-    margin: 0 0 20px;
+    padding: 0 0 16px;
+    margin: 0 0 16px;
     border-bottom: 2px solid #fff;
   }
   .nav-section .mobile-menu > ul > li > a {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 600;
     color: #666666;
     transition: 0.2s all ease-in-out;

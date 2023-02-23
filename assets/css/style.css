@@ -341,6 +341,33 @@ html[dir=ltr] .nav-section .search-box form button i {
     display: none;
   }
 }
+.footer-section {
+  border-top: 1px solid rgba(150, 150, 150, 0.2);
+  padding: 24px 0;
+}
+.footer-section .logo-box img {
+  height: 100px;
+}
+.footer-section .prag {
+  padding: 12px 0;
+  max-width: 60%;
+  font-size: 13px;
+}
+.footer-section .footer-list .footer-title {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0 0 12px;
+  color: #4b4b4b;
+}
+.footer-section .footer-list ul li a {
+  font-size: 14px;
+  font-weight: 600;
+  color: #969696;
+}
+.footer-section .footer-list ul li a:hover {
+  color: #4b4b4b;
+}
+
 .copyRight-footer {
   text-align: center;
   background-color: #969696;
@@ -1311,7 +1338,7 @@ html[dir=ltr] .objectives-section .objectives-list-box .objectives-list li:after
   transition: 0.4s all ease-in-out;
 }
 
-.nav-section, .career-section .career-box ul li a, .contact-section .contact-us-list-box ul li .text, .link-box a,
+.nav-section, .footer-section .footer-list ul li a, .career-section .career-box ul li a, .contact-section .contact-us-list-box ul li .text, .link-box a,
 .link-box button, .socile-list-box .socile-list li a {
   transition: 0.2s all ease-in-out;
 }

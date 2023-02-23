@@ -57,4 +57,10 @@ $(document).ready(function () {
       prevEl: ".projects-swiper-button-prev",
     },
   });
+
+  new Swiper("#team-slider", {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    freeMode: true,
+  });
 });

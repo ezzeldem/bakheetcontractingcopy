@@ -508,9 +508,6 @@ html[dir=ltr] .nav-section .search-box form button i {
   right: 80px;
 }
 
-.about-section {
-  padding: 0 0 40px;
-}
 .about-section.about-section-page {
   padding: 40px 0;
 }
@@ -638,6 +635,13 @@ html[dir=ltr] .our-project-section .projects-swiper-button-box .projects-swiper-
   padding: 40px;
   z-index: 1;
   position: relative;
+}
+.project-details-section .our-project-section .projects-slider-box .swiper-slide {
+  display: block;
+}
+.our-project-section .projects-slider-box .swiper-slide .fancybox-link {
+  position: absolute;
+  inset: 0;
 }
 .our-project-section .projects-slider-box .swiper-slide:after {
   position: absolute;
@@ -1094,7 +1098,10 @@ html[dir=rtl] .socile-list-box .socile-list li {
 }
 
 .banner-intro-section {
-  margin: 0 0 40px;
+  padding: 0 0 40px;
+}
+.banner-intro-section.sub-banner .banner-intro-box {
+  animation: unset !important;
 }
 .banner-intro-section .banner-intro-box {
   padding: 120px 40px;
@@ -1134,6 +1141,12 @@ html[dir=rtl] .banner-intro-section .banner-intro-box .sub-title {
 html[dir=ltr] .banner-intro-section .banner-intro-box .sub-title {
   padding-right: 220px;
 }
+.banner-intro-section .banner-intro-box .sub-title.no-after {
+  padding: 0 !important;
+}
+.banner-intro-section .banner-intro-box .sub-title.no-after:after {
+  display: none;
+}
 .banner-intro-section .banner-intro-box .sub-title:after {
   position: absolute;
   width: 200px;
@@ -1157,6 +1170,23 @@ html[dir=ltr] .banner-intro-section .banner-intro-box .sub-title:after {
   color: white;
 }
 
+@media (max-width: 772px) {
+  .banner-intro-section .banner-intro-box .sub-title {
+    font-size: 14px;
+  }
+  html[dir=rtl] .banner-intro-section .banner-intro-box .sub-title {
+    padding-left: 50px;
+  }
+  html[dir=ltr] .banner-intro-section .banner-intro-box .sub-title {
+    padding-right: 50px;
+  }
+  .banner-intro-section .banner-intro-box .sub-title:after {
+    width: 40px;
+  }
+  .banner-intro-section .banner-intro-box .title {
+    font-size: 30px;
+  }
+}
 .small-box {
   padding: 0 24px 24px;
 }
@@ -1203,50 +1233,46 @@ html[dir=ltr] .vision-img-box .back-img {
   transform: translateY(-50%);
 }
 
-.small-box {
-  padding: 0 24px 24px;
+.project-section-box:hover .project-section-box-img:after {
+  opacity: 1;
 }
-.small-box .title {
-  font-size: 34px;
-  color: #986e02;
-  padding: 0 0 12px;
+.project-section-box:hover .project-section-box-img img {
+  transform: scale(1.05);
+}
+.project-section-box .project-section-box-img {
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 12px;
+}
+.project-section-box .project-section-box-img:after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  transition: 1s all ease-in-out;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.171) 0%, rgba(0, 0, 0, 0.685) 100%);
+  opacity: 0;
+}
+.project-section-box .project-section-box-img a {
+  z-index: 2;
+}
+.project-section-box .project-section-box-img img {
+  transition: 1.1s all linear;
+  height: 400px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.project-section-box .project-section-title a {
+  font-size: 23px;
   font-weight: 700;
+  color: black;
 }
-.small-box .sub-title {
-  font-size: 15px;
-  font-weight: 600;
+.project-section-box .project-section-title a:hover {
   color: #585858;
 }
-
-.vision-img-box {
-  position: relative;
-  height: 600px;
-}
-.vision-img-box .back-img {
-  height: 600px;
-  width: 300px;
-  position: absolute;
-  top: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  transform: translateY(-50%);
-}
-html[dir=rtl] .vision-img-box .back-img {
-  left: 0;
-}
-html[dir=ltr] .vision-img-box .back-img {
-  right: 0;
-}
-.vision-img-box .front-img {
-  position: absolute;
-  -o-object-fit: cover;
-     object-fit: cover;
-  top: 50%;
-  height: 329px;
-  width: 80%;
-  left: 100px;
-  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
-  transform: translateY(-50%);
+.project-section-box .prag {
+  padding: 12px 0;
+  font-size: 16px;
 }
 
 html[dir=ltr] .mission-section .margin-aside {
@@ -1339,6 +1365,6 @@ html[dir=ltr] .objectives-section .objectives-list-box .objectives-list li:after
 }
 
 .nav-section, .footer-section .footer-list ul li a, .career-section .career-box ul li a, .contact-section .contact-us-list-box ul li .text, .link-box a,
-.link-box button, .socile-list-box .socile-list li a {
+.link-box button, .socile-list-box .socile-list li a, .project-section-box .project-section-title a {
   transition: 0.2s all ease-in-out;
 }

@@ -8,6 +8,7 @@ $(document).ready(function () {
     // },
     loopAdditionalSlides: 10,
     watchSlidesProgress: true,
+    lazy: true,
     pagination: {
       el: ".swiper-pagination",
       type: "custom",
@@ -36,6 +37,7 @@ $(document).ready(function () {
     effect: "creative",
     slidesPerView: 1,
     spaceBetween: 0,
+    lazy: true,
     breakpoints: {
       772: {
         slidesPerView: 2,
@@ -57,10 +59,36 @@ $(document).ready(function () {
       prevEl: ".projects-swiper-button-prev",
     },
   });
+  var mySwiper = new Swiper(".projects-details-slider", {
+    grabCursor: true,
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    lazy: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".projects-swiper-button-next",
+      prevEl: ".projects-swiper-button-prev",
+    },
+  });
 
-  new Swiper(".mySwiper", {
+  $(".swiper-wrapper").mouseenter(function () {
+    mySwiper.autoplay.stop();
+    console.log("slider stopped");
+  });
+
+  $(".swiper-wrapper").mouseleave(function () {
+    mySwiper.autoplay.start();
+    console.log("slider started again");
+  });
+
+  new Swiper(".about-swiper", {
     slidesPerView: 2,
     loop: true,
+    lazy: true,
     autoplay: {
       delay: 2500,
       disableOnInteraction: false,

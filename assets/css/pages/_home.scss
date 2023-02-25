@@ -124,7 +124,7 @@
 }
 
 .about-section {
-  padding: 0 0 40px;
+  // padding: 0 0 40px;
   @extend.section-pattern;
   &.about-section-page {
     padding: 40px 0;
@@ -262,6 +262,13 @@
       padding: 40px;
       z-index: 1;
       position: relative;
+      .project-details-section & {
+        display: block;
+      }
+      .fancybox-link {
+        position: absolute;
+        inset: 0;
+      }
       &:after {
         position: absolute;
         inset: 0;

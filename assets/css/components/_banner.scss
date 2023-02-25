@@ -1,5 +1,11 @@
 .banner-intro-section {
-  margin: 0 0 40px;
+  padding: 0 0 40px;
+
+  &.sub-banner {
+    .banner-intro-box {
+      animation: unset !important;
+    }
+  }
 
   .banner-intro-box {
     padding: 120px 40px;
@@ -9,6 +15,7 @@
     position: relative;
     z-index: 1;
     @include animation-scroll(bannerScale);
+
     &:after {
       position: absolute;
       inset: 0;
@@ -33,6 +40,12 @@
       @include dir(ltr) {
         padding-right: 220px;
       }
+      &.no-after {
+        padding: 0 !important;
+        &:after {
+          display: none;
+        }
+      }
       &:after {
         position: absolute;
         width: 200px;
@@ -55,6 +68,28 @@
       font-size: 42px;
       font-weight: 700;
       color: rgba($color-white, 1);
+    }
+  }
+}
+
+@media (max-width: 772px) {
+  .banner-intro-section {
+    .banner-intro-box {
+      .sub-title {
+        font-size: 14px;
+        @include dir(rtl) {
+          padding-left: 50px;
+        }
+        @include dir(ltr) {
+          padding-right: 50px;
+        }
+        &:after {
+          width: 40px;
+        }
+      }
+      .title {
+        font-size: 30px;
+      }
     }
   }
 }

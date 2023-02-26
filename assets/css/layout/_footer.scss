@@ -53,3 +53,20 @@
     }
   }
 }
+@media (max-width: 992px) {
+  .footer-section {
+    .prag {
+      max-width: 100%;
+    }
+  }
+}
+@media (max-width: 772px) {
+  .footer-section {
+    .prag {
+      margin: 0 0 12px;
+    }
+    .map {
+      padding: 24px 0 0;
+    }
+  }
+}

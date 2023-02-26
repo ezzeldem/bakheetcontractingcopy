@@ -97,3 +97,12 @@
     font-size: 16px;
   }
 }
+
+@media (max-width: 772px) {
+  .vision-img-box {
+    .front-img {
+      width: 100%;
+      left: 0;
+    }
+  }
+}

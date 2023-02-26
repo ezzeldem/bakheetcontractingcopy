@@ -50,6 +50,11 @@ html[dir=ltr] .container-width {
   z-index: -1;
 }
 
+@media (max-width: 992px) {
+  .order-sm {
+    order: -1;
+  }
+}
 p,
 ul,
 h1,
@@ -385,6 +390,19 @@ html[dir=ltr] .nav-section .search-box form button i {
   color: #4b4b4b;
 }
 
+@media (max-width: 992px) {
+  .footer-section .prag {
+    max-width: 100%;
+  }
+}
+@media (max-width: 772px) {
+  .footer-section .prag {
+    margin: 0 0 12px;
+  }
+  .footer-section .map {
+    padding: 24px 0 0;
+  }
+}
 .intro-section {
   overflow: hidden;
   position: relative;
@@ -1275,11 +1293,22 @@ html[dir=ltr] .vision-img-box .back-img {
   font-size: 16px;
 }
 
+@media (max-width: 772px) {
+  .vision-img-box .front-img {
+    width: 100%;
+    left: 0;
+  }
+}
 html[dir=ltr] .mission-section .margin-aside {
   margin-left: -160px;
 }
 html[dir=rtl] .mission-section .margin-aside {
   margin-right: -160px;
+}
+@media (max-width: 772px) {
+  .mission-section .margin-aside {
+    margin: 0 !important;
+  }
 }
 .mission-section .mission-img-box img {
   height: 500px;

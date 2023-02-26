@@ -7,6 +7,11 @@
     @include dir(rtl) {
       margin-right: -160px;
     }
+    @media (max-width: 772px) {
+      & {
+        margin: 0 !important;
+      }
+    }
   }
   .mission-img-box {
     img {

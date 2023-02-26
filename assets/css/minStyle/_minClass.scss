@@ -46,3 +46,9 @@
     z-index: -1;
   }
 }
+
+@media (max-width: 992px) {
+  .order-sm {
+    order: -1;
+  }
+}

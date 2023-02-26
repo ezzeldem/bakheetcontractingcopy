@@ -87,6 +87,7 @@ $(document).ready(function () {
 
   new Swiper(".about-swiper", {
     slidesPerView: 2,
+    spaceBetween: 10,
     loop: true,
     lazy: true,
     autoplay: {
@@ -94,7 +95,15 @@ $(document).ready(function () {
       disableOnInteraction: false,
     },
     breakpoints: {
-      772: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 10,
+      },
+      1024: {
         slidesPerView: 5,
         spaceBetween: 10,
       },

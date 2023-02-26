@@ -1,0 +1,38 @@
+.services-list-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0 0;
+  .services-box {
+    height: 400px;
+    width: 25%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    padding: 20px;
+    position: relative;
+    align-items: flex-end;
+    @extend%trans4;
+    &:hover {
+      width: 50%;
+      .services-content {
+        opacity: 1;
+      }
+    }
+    .services-content {
+      opacity: 0;
+      @extend%trans4;
+      .title {
+        font-size: 20px;
+        color: $color-white;
+        font-weight: 800;
+        padding-bottom: 12px;
+      }
+      .prag {
+        color: $color-white;
+        font-size: 14px;
+      }
+    }
+  }
+}

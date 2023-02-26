@@ -1050,6 +1050,43 @@ html[dir=ltr] .our-project-section .projects-swiper-button-box .projects-swiper-
   font-size: 16px;
 }
 
+.services-list-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0 0;
+}
+.services-list-box .services-box {
+  height: 400px;
+  width: 25%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  padding: 20px;
+  position: relative;
+  align-items: flex-end;
+}
+.services-list-box .services-box:hover {
+  width: 50%;
+}
+.services-list-box .services-box:hover .services-content {
+  opacity: 1;
+}
+.services-list-box .services-box .services-content {
+  opacity: 0;
+}
+.services-list-box .services-box .services-content .title {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 800;
+  padding-bottom: 12px;
+}
+.services-list-box .services-box .services-content .prag {
+  color: #fff;
+  font-size: 14px;
+}
+
 .gallery {
   --gap: 1rem;
   --min-height: 20rem;
@@ -1394,11 +1431,6 @@ html[dir=rtl] .socile-list-box .socile-list li {
   background-size: cover;
   position: relative;
   z-index: 1;
-  animation: bannerScale 1s ease-in-out infinite;
-  animation-delay: calc(var(--scroll) * -1s);
-  animation-play-state: paused;
-  animation-iteration-count: 1;
-  animation-fill-mode: both;
   background-attachment: fixed;
 }
 .banner-intro-section .banner-intro-box:after {
@@ -1414,11 +1446,17 @@ html[dir=rtl] .socile-list-box .socile-list li {
   position: relative;
   font-size: 18px;
   font-weight: 600;
-  color: white;
   letter-spacing: 7px;
   margin-bottom: 10px;
   z-index: 1;
   display: inline-block;
+}
+.banner-intro-section .banner-intro-box .sub-title,
+.banner-intro-section .banner-intro-box .sub-title a {
+  color: white;
+}
+.banner-intro-section .banner-intro-box .sub-title:hover a {
+  color: #ffc93c;
 }
 html[dir=rtl] .banner-intro-section .banner-intro-box .sub-title {
   padding-left: 220px;
@@ -1670,17 +1708,12 @@ html[dir=ltr] .objectives-section .objectives-list-box .objectives-list li:after
   color: #4b4b4b;
 }
 
-@keyframes bannerScale {
-  to {
-    opacity: 0;
-    transform: scale(-1) translateY(-300px);
-  }
-}
-.copyRight-footer .copyRight-footer-h a, .our-project-section .projects-swiper-button-box .projects-swiper-button {
+.copyRight-footer .copyRight-footer-h a, .our-project-section .projects-swiper-button-box .projects-swiper-button, .services-list-box .services-box, .services-list-box .services-box .services-content {
   transition: 0.4s all ease-in-out;
 }
 
 .social-media-list li a, .nav-section, .footer-section .footer-list ul li a, .career-section .career-box ul li a, .contact-section .contact-us-list-box ul li .text, .number-item a, .event-page .news-slider-box .arrow-box, .link-box a,
-.link-box button, .socile-list-box .socile-list li a, .project-section-box .project-section-title a {
+.link-box button, .socile-list-box .socile-list li a, .banner-intro-section .banner-intro-box .sub-title,
+.banner-intro-section .banner-intro-box .sub-title a, .project-section-box .project-section-title a {
   transition: 0.2s all ease-in-out;
 }

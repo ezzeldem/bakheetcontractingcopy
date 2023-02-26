@@ -14,7 +14,6 @@
     background-size: cover;
     position: relative;
     z-index: 1;
-    @include animation-scroll(bannerScale);
     background-attachment: fixed;
     &:after {
       position: absolute;
@@ -29,11 +28,20 @@
       position: relative;
       font-size: 18px;
       font-weight: 600;
-      color: rgba($color-white, 1);
       letter-spacing: 7px;
       margin-bottom: 10px;
       z-index: 1;
       display: inline-block;
+      &,
+      a {
+        @extend%trans2;
+        color: rgba($color-white, 1);
+      }
+      &:hover {
+        a {
+          color: rgba($color-secondary, 1);
+        }
+      }
       @include dir(rtl) {
         padding-left: 220px;
       }

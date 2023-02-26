@@ -1,0 +1,44 @@
+.contact-page {
+  @extend.section-pattern;
+  //   background-color: $color-primary-dark;
+  .form-group {
+    background-color: rgba($color-primary-dark, 0.1);
+    input,
+    select,
+    textarea {
+      color: rgba($color-primary-dark, 1) !important;
+      &::placeholder {
+        color: rgba($color-primary, 0.5);
+      }
+    }
+  }
+  .section-title-box {
+    padding: 24px 0;
+  }
+  .accordion-box {
+  }
+}
+
+.number-item {
+  a {
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba($color-primary, 1);
+    @extend%trans2;
+    .text {
+      display: inline-block;
+      padding: 0 6px;
+    }
+    &:hover {
+      color: rgba($color-primary-dark, 1);
+    }
+  }
+}
+
+@media (max-width: 772px) {
+  .contact-page {
+    .contact-form-box {
+      padding: 0 0 24px;
+    }
+  }
+}

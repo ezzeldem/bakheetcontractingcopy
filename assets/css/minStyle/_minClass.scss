@@ -47,6 +47,17 @@
   }
 }
 
+.accordion-button {
+  &:focus {
+    border-color: transparent;
+    box-shadow: unset;
+  }
+  &:not(.collapsed) {
+    background-color: rgba($color-primary-dark, 0.1);
+    color: rgba($color-primary-dark, 1);
+  }
+}
+
 @media (max-width: 992px) {
   .order-sm {
     order: -1;

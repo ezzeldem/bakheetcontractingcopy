@@ -1,0 +1,98 @@
+.event-page {
+  .news-slider-box {
+    position: relative;
+    &:hover {
+      .arrow-box {
+        opacity: 1;
+      }
+    }
+    .arrow-box {
+      opacity: 0;
+      @extend%trans2;
+      z-index: 999;
+      width: 10%;
+      height: 79.5%;
+      // background-color: red;
+      position: absolute;
+      top: 0%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      color: $color-white;
+      cursor: pointer;
+      background-color: rgba($color-black, 0.2);
+      box-shadow: 0 0 20px rgba($color-black, 0.3);
+      backdrop-filter: blur(2px);
+      &.next-arrow {
+        left: 0;
+      }
+      &.prev-arrow {
+        right: 0;
+      }
+      &:hover {
+        background-color: rgba($color-black, 0.3);
+        backdrop-filter: blur(4px);
+      }
+    }
+
+    .news-slider {
+      .news-slider-item {
+        width: calc(100% - 5px) !important;
+        .event-box {
+          position: relative;
+          &:hover {
+            .img-box {
+              &:after {
+                opacity: 1;
+              }
+
+              img {
+                transform: scale(1.05);
+              }
+            }
+            .slider-text-box {
+              .event-title {
+                color: $color-secondary-dark;
+              }
+            }
+          }
+          .img-box {
+            overflow: hidden;
+            position: relative;
+            &:after {
+              position: absolute;
+              inset: 0;
+              content: "";
+              transition: 1s all ease-in-out;
+              background: radial-gradient(
+                circle,
+                rgba(0, 0, 0, 0.171) 0%,
+                rgba(0, 0, 0, 0.685) 100%
+              );
+              opacity: 0;
+            }
+            img {
+              transition: 1.1s all ease-in-out;
+              height: 400px;
+              width: 100%;
+              object-fit: cover;
+            }
+          }
+          .slider-text-box {
+            padding: 12px;
+            .event-title {
+              font-size: 25px;
+              font-weight: 700;
+              color: $color-primary-dark;
+              transition: 0.8s all ease-in-out;
+            }
+            .prag {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

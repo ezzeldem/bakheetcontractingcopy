@@ -1,4 +1,9 @@
 $(document).ready(function () {
+  if ($("html").attr("dir") == "rtl") {
+    var dir_lang = true;
+  } else {
+    var dir_lang = false;
+  }
   let interleaveOffset = 0.5;
   new Swiper(".intro-slider", {
     loop: true,
@@ -59,7 +64,7 @@ $(document).ready(function () {
       prevEl: ".projects-swiper-button-prev",
     },
   });
-  var mySwiper = new Swiper(".projects-details-slider", {
+  var projectsSwiper = new Swiper(".projects-details-slider", {
     grabCursor: true,
     loop: true,
     slidesPerView: 1,
@@ -73,16 +78,6 @@ $(document).ready(function () {
       nextEl: ".projects-swiper-button-next",
       prevEl: ".projects-swiper-button-prev",
     },
-  });
-
-  $(".swiper-wrapper").mouseenter(function () {
-    mySwiper.autoplay.stop();
-    console.log("slider stopped");
-  });
-
-  $(".swiper-wrapper").mouseleave(function () {
-    mySwiper.autoplay.start();
-    console.log("slider started again");
   });
 
   new Swiper(".about-swiper", {
@@ -108,5 +103,44 @@ $(document).ready(function () {
         spaceBetween: 10,
       },
     },
+  });
+
+  $(".swiper-wrapper").mouseenter(function () {
+    projectsSwiper.autoplay.stop();
+  });
+
+  $(".swiper-wrapper").mouseleave(function () {
+    projectsSwiper.autoplay.start();
+  });
+
+  // slick slider
+
+  $(".news-slider").slick({
+    slidesToShow: 4,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    pauseOnHover: true,
+    prevArrow: `<div class="prev-arrow arrow-box slick-arrow " >
+    <i class="fas fa-angle-right"></i>
+  </div>`,
+    nextArrow: `<div class="next-arrow arrow-box slick-arrow" >
+    <i class="fas fa-angle-left"></i>
+  </div>`,
+    infinite: true,
+    rtl: dir_lang,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 772,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
   });
 });

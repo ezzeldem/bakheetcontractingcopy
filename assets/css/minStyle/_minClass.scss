@@ -57,6 +57,38 @@
     color: rgba($color-primary-dark, 1);
   }
 }
+.date-item {
+  padding: 12px 0;
+  font-size: 15px;
+  color: rgba($color-white, 1);
+  letter-spacing: 5px;
+  i {
+    padding: 0 4px;
+  }
+}
+
+.social-media-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  li {
+    padding: 0 12px;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      font-size: 28px;
+      @extend%trans2;
+      color: rgba($color-white, 1);
+      filter: grayscale(100%);
+      &:hover {
+        filter: grayscale(0%);
+      }
+    }
+  }
+}
 
 @media (max-width: 992px) {
   .order-sm {

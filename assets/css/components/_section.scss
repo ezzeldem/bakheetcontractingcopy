@@ -65,6 +65,11 @@
 
   .objectives-img {
     position: relative;
+    img {
+      max-height: 400px;
+      width: 100%;
+      object-fit: cover;
+    }
     &:after {
       inset: 16px;
       position: absolute;

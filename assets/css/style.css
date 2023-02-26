@@ -1681,6 +1681,12 @@ html[dir=ltr] .objectives-section .objectives-list-box .objectives-list li:after
 .objectives-section .objectives-img {
   position: relative;
 }
+.objectives-section .objectives-img img {
+  max-height: 400px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .objectives-section .objectives-img:after {
   inset: 16px;
   position: absolute;

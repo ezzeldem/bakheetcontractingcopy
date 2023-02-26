@@ -98,6 +98,26 @@
   }
 }
 
+.img-box-out {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  &::after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    bottom: 0;
+    height: 80%;
+    background-color: rgba($color-primary-dark, 0.5);
+  }
+  img {
+    height: 400px;
+  }
+}
+
 @media (max-width: 772px) {
   .vision-img-box {
     .front-img {

@@ -766,25 +766,6 @@ html[dir=ltr] .our-project-section .projects-swiper-button-box .projects-swiper-
   color: white;
 }
 
-.career-section .career-img {
-  position: relative;
-  text-align: center;
-  z-index: 1;
-}
-.career-section .career-img::after {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  bottom: 0;
-  height: 80%;
-  background-color: rgba(75, 75, 75, 0.5);
-}
-.career-section .career-img img {
-  height: 400px;
-}
 .career-section .quote-box .quote-item {
   font-size: 30px;
   font-weight: 800;
@@ -1577,6 +1558,26 @@ html[dir=ltr] .vision-img-box .back-img {
 .project-section-box .prag {
   padding: 12px 0;
   font-size: 16px;
+}
+
+.img-box-out {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+.img-box-out::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  bottom: 0;
+  height: 80%;
+  background-color: rgba(75, 75, 75, 0.5);
+}
+.img-box-out img {
+  height: 400px;
 }
 
 @media (max-width: 772px) {

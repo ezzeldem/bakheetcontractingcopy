@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;300;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 .overlay {
   inset: 0;
   background-color: rgba(0, 0, 0, 0.26);
@@ -128,7 +128,7 @@ html[dir=rtl] body {
   font-family: "Vazirmatn", sans-serif;
 }
 html[dir=ltr] body {
-  font-family: "Nunito", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 .nav-section {

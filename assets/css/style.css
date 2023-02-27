@@ -1295,6 +1295,18 @@ html[dir=ltr] .our-project-section .projects-swiper-button-box .projects-swiper-
   background-color: #4b4b4b;
   border-color: #4b4b4b;
 }
+.link-box.yellow-box a,
+.link-box.yellow-box button {
+  background-color: #ffc93c;
+  color: #000;
+  border: 0;
+}
+.link-box.yellow-box a:hover,
+.link-box.yellow-box button:hover {
+  color: #fff;
+  background-color: #986e02;
+  border-color: #986e02;
+}
 .link-box.transparent-box a,
 .link-box.transparent-box button {
   background-color: transparent;
@@ -1314,7 +1326,7 @@ html[dir=ltr] .our-project-section .projects-swiper-button-box .projects-swiper-
   width: -moz-fit-content;
   width: fit-content;
   font-size: 17px;
-  font-weight: 500;
+  font-weight: 700;
   color: #969696;
   padding: 12px 30px;
   border: solid 1px #969696;
@@ -1634,6 +1646,30 @@ html[dir=ltr] .vision-img-box .back-img {
   height: 400px;
 }
 
+.brochures-box {
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+.brochures-box i {
+  font-size: 40px;
+  color: rgba(102, 102, 102, 0.4);
+  padding-bottom: 12px;
+}
+.brochures-box .brochures-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #969696;
+}
+.brochures-box:hover {
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+}
+.brochures-box:hover .brochures-title {
+  color: #4b4b4b;
+}
+
 @media (max-width: 772px) {
   .vision-img-box .front-img {
     width: 100%;
@@ -1736,6 +1772,6 @@ html[dir=ltr] .objectives-section .objectives-list-box .objectives-list li:after
 
 .social-media-list li a, .nav-section, .footer-section .footer-list ul li a, .career-section .career-box ul li a, .contact-section .contact-us-list-box ul li .text, .number-item a, .event-page .news-slider-box .arrow-box, .link-box a,
 .link-box button, .socile-list-box .socile-list li a, .banner-intro-section .banner-intro-box .sub-title,
-.banner-intro-section .banner-intro-box .sub-title a, .project-section-box .project-section-title a {
+.banner-intro-section .banner-intro-box .sub-title a, .project-section-box .project-section-title a, .brochures-box, .brochures-box .brochures-title {
   transition: 0.2s all ease-in-out;
 }

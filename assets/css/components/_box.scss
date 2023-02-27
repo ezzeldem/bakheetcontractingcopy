@@ -118,6 +118,32 @@
   }
 }
 
+.brochures-box {
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0 12px rgba($color-black, 0.1);
+  @extend%trans2;
+  margin-bottom: 10px;
+  i {
+    font-size: 40px;
+    color: rgba($color-gray, 0.4);
+    padding-bottom: 12px;
+  }
+  .brochures-title {
+    font-size: 20px;
+    @extend%trans2;
+    font-weight: 700;
+    color: rgba($color-primary, 1);
+  }
+  &:hover {
+    box-shadow: 0 0 14px rgba($color-black, 0.1);
+    .brochures-title {
+      color: rgba($color-primary-dark, 1);
+    }
+  }
+}
+
 @media (max-width: 772px) {
   .vision-img-box {
     .front-img {

@@ -8,16 +8,15 @@
   }
   .prag {
     padding: 12px 0;
-    max-width: 60%;
     font-size: 13px;
   }
+  .footer-title {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0 0 12px;
+    color: rgba($color-primary-dark, 1);
+  }
   .footer-list {
-    .footer-title {
-      font-size: 18px;
-      font-weight: 500;
-      padding: 0 0 12px;
-      color: rgba($color-primary-dark, 1);
-    }
     ul {
       li {
         a {
@@ -28,6 +27,18 @@
           &:hover {
             color: rgba($color-primary-dark, 1);
           }
+        }
+      }
+    }
+  }
+
+  .socile-list-box {
+    ul {
+      li {
+        a {
+          width: 30px;
+          height: 30px;
+          font-size: 14px;
         }
       }
     }

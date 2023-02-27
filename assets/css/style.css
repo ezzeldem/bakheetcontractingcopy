@@ -396,10 +396,9 @@ html[dir=ltr] .nav-section .search-box form button i {
 }
 .footer-section .prag {
   padding: 12px 0;
-  max-width: 60%;
   font-size: 13px;
 }
-.footer-section .footer-list .footer-title {
+.footer-section .footer-title {
   font-size: 18px;
   font-weight: 500;
   padding: 0 0 12px;
@@ -412,6 +411,11 @@ html[dir=ltr] .nav-section .search-box form button i {
 }
 .footer-section .footer-list ul li a:hover {
   color: #4b4b4b;
+}
+.footer-section .socile-list-box ul li a {
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
 }
 
 .copyRight-footer {

@@ -1424,27 +1424,23 @@ html[dir=rtl] .socile-list-box .socile-list li {
 
 .banner-intro-section {
   padding: 0 0 40px;
-}
-.banner-intro-section.sub-banner .banner-intro-box {
-  animation: unset !important;
-}
-.banner-intro-section .banner-intro-box {
-  padding: 120px 40px;
-  background-position: center;
+  padding: 267px 40px 120px;
+  background-position: right center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   z-index: 1;
   background-attachment: fixed;
 }
-.banner-intro-section .banner-intro-box:after {
+.banner-intro-section:after {
   position: absolute;
   inset: 0;
   content: "";
-  background-color: rgba(75, 75, 75, 0.2);
+  background-color: rgba(75, 75, 75, 0.5);
   z-index: -1;
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
+}
+.banner-intro-section.sub-banner .banner-intro-box {
+  animation: unset !important;
 }
 .banner-intro-section .banner-intro-box .sub-title {
   position: relative;

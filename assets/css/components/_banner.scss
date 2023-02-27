@@ -1,6 +1,20 @@
 .banner-intro-section {
   padding: 0 0 40px;
-
+  padding: 267px 40px 120px;
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  background-attachment: fixed;
+  &:after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background-color: rgba($color-primary-dark, 0.5);
+    z-index: -1;
+    // backdrop-filter: blur(2px);
+  }
   &.sub-banner {
     .banner-intro-box {
       animation: unset !important;
@@ -8,22 +22,6 @@
   }
 
   .banner-intro-box {
-    padding: 120px 40px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    z-index: 1;
-    background-attachment: fixed;
-    &:after {
-      position: absolute;
-      inset: 0;
-      content: "";
-      background-color: rgba($color-primary-dark, 0.2);
-      z-index: -1;
-      backdrop-filter: blur(2px);
-    }
-
     .sub-title {
       position: relative;
       font-size: 18px;

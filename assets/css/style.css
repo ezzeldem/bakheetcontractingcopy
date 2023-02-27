@@ -390,6 +390,22 @@ html[dir=ltr] .nav-section .search-box form button i {
 .footer-section {
   border-top: 1px solid rgba(150, 150, 150, 0.2);
   padding: 24px 0;
+  position: relative;
+  z-index: 1;
+}
+.footer-section:after {
+  z-index: -1;
+  opacity: 0.05;
+  content: "";
+  bottom: -10px;
+  left: 0;
+  background-image: url("../img/13-133022_building-png.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 .footer-section .logo-box img {
   height: 100px;
